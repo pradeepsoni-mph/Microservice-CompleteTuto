@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "df77ddda-b76d-460f-96b9-9bf2d4e83f9d",
+		"name": "Through-APIGateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product http://localhost:9000/product/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9900/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save product http://localhost:9900/product/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mouse\",\r\n    \"price\": 1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9900/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id http://localhost:9900/product/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9900/product/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Customer http://localhost:9900/customer/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pradeep\",\r\n    \"address\": \"Usraha tola,Umari\",\r\n    \"pid\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9900/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9900",
+					"path": [
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

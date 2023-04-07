@@ -1,0 +1,27 @@
+
+server:
+  port: 9900
+
+spring:
+  application:
+    name: Api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: Customer-Service
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/customer/**
+
+        - id: Product-Service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/product/**
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registery: true
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
